@@ -1,0 +1,17 @@
+#FULL ADDER
+
+module full_adder(s,c,in1, in2, cin);
+
+output wire s,c;
+output wire I1, I2, I3;
+
+input wire in1, in2;
+
+//Call half_adder modules
+
+half_adder ha1 (I1, I2, in1 in2);
+half_adder ha2 (s,I3,I1, cin);
+
+assign c = I2 || I3;
+
+endmodule
