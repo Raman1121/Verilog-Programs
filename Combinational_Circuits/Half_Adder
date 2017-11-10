@@ -1,0 +1,13 @@
+#HALF ADDER
+
+module half_adder(S,C,A,B);
+
+output S,C;
+input A,B;
+
+wire S,C,A,B;
+
+assign S = A^B;  //Sum is A xor B
+assign C = A&B;  //Carry is A and B
+
+endmodule
