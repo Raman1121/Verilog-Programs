@@ -1,0 +1,25 @@
+#TEST BENCH for 4-bit_adder
+
+module adder_tb ;
+
+reg[3:0] x_t;       //TEST VARIABLES
+reg[3:0] y_t;       //TEST VARIABLES
+
+wire[3:0] sum_t, carry_t;
+
+4-bit_adder fb(.x(x_t), .sum(sum_t), .carry(carry_t), .y(y_t));     //TO PASS THE VARIABLES IN ANY ORDER
+
+always
+    begin  
+        #5
+            x_t = 4'b1110;
+            y_t = 4'b1010;
+        #5
+            x_t = 4'b1101;
+            y_t = 4'b0011;
+        end
+
+endmodule
+
+
+
