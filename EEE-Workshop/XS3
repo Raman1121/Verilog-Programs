@@ -1,0 +1,13 @@
+#XS3 MODULE
+
+module xs3(input [3:0], output[3:0] a_xs3);
+
+reg[3:0] a;
+wire[3:0] a_xs3;
+
+wire carry;
+
+four_bit_adder(a, 4'b0011, a_xs3, carry);       //JUST ADD 3 TO THE INCOMING INPUT  
+
+endmodule
+

@@ -1,0 +1,17 @@
+#GRAY CODE
+For gray code, copy the MSB and take XOR of the (1st,2nd), (2nd,3rd) and (3rd,4th) bits
+
+module gray_code(input[3:0] x, output[3:0] y);
+
+reg[3:0] x;
+wire[3:0] y;
+
+y[3] = x[3];         //copy the MSB 
+y[2] = x[3] ^ x[2];  //XOR
+y[1] = x[2] ^ x[1];  //XOR
+y[0] = x[1] ^ x[0];  //XOR
+
+endmodule
+
+
+
