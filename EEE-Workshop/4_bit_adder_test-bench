@@ -9,7 +9,7 @@ wire[3:0] sum_t, carry_t;
 
 4-bit_adder fb(.x(x_t), .sum(sum_t), .carry(carry_t), .y(y_t));     //TO PASS THE VARIABLES IN ANY ORDER
 
-always
+always@
     begin  
         #5
             x_t = 4'b1110;
