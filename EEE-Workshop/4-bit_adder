@@ -1,0 +1,23 @@
+#Four-Bit-Adder
+
+module four_bit_adder(x,y, sum, c);
+
+input x,y;
+output sum, carry;
+
+output fcarry;      //Final carry
+
+reg[3:0] x,y;       //To save the data
+
+wire [3:0] sum;     //4 bits for sum
+wire [2:0} c;       //3 bits for the carry wire
+
+full_adder fa1(x[0], y[0], 1'b0, sum[0], carry[0]);
+full_adder fa2(x[1], y[1], c[0], sum[1], carry[1]);
+full_adder fa3(x[2], y[2], c[1], sum[2], carry[2]);
+full_adder fa4(x[3], y[3], c[2], sum[3], fcarry);
+
+endmodule;
+
+
+
