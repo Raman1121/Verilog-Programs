@@ -1,0 +1,9 @@
+module hello_world();
+
+begin
+$display("Hello World");
+ 
+#1 $finish
+end
+endmodule
+
